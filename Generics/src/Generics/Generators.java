@@ -5,7 +5,7 @@ import Generics.CoffeGenerator.CoffeGenerator;
 import Generics.Fibonacci.Fibonacci;
 
 import java.util.*;
-
+// Примечание.
 public class Generators
 {
 	public static <T> Collection<T> fill(
