@@ -6,6 +6,7 @@ import Generics.Fibonacci.Fibonacci;
 
 import java.util.*;
 // Примечание.
+// Еще примечание.
 public class Generators
 {
 	public static <T> Collection<T> fill(
