@@ -6,16 +6,16 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
-@WebServlet("/")
+import static com.zhuravel.HelloServlet.URL_HELLO;
+
+@WebServlet(MainServlet.URL_MAIN)
 public class MainServlet extends HttpServlet {
+
+    public static final String URL_MAIN = "/";
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        resp.setContentType("text/html");
-        PrintWriter printWriter = resp.getWriter();
-        printWriter.write("Hello!");
-        printWriter.close();
+        resp.sendRedirect(req.getContextPath() + URL_HELLO);
     }
 }
