@@ -1,4 +1,4 @@
-package com.zhuravel.multythreading;
+package com.zhuravel.multythreading.sleep;
 
 public class MyRunnable implements Runnable {
 
