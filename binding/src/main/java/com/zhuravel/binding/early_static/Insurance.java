@@ -1,4 +1,4 @@
-package com.zhuravel.binding.early;
+package com.zhuravel.binding.early_static;
 
 public class Insurance {
 

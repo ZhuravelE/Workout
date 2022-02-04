@@ -1,4 +1,4 @@
-package com.zhuravel.binding.late;
+package com.zhuravel.binding.late_dynamic;
 
 public class Figure {
 
