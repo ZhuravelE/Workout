@@ -1,21 +1,21 @@
 package com.zhuravel.daologic;
 
-import com.zhuravel.entity.Abonent;
+import com.zhuravel.entity.Order;
 
 import java.util.List;
 
 /**
  * Evgenii Zhuravel created on 13.05.2022
  */
-public class AbonentDao extends AbstractDao<Abonent> {
+public class OrderDao extends AbstractDao<Order> {
 
     @Override
-    public List<Abonent> findAll() {
+    public List<Order> findAll() {
         throw new UnsupportedOperationException();
     }
 
     @Override
-    public Abonent findEntityById(long id) {
+    public Order findEntityById(long id) {
         throw new UnsupportedOperationException();
     }
 
@@ -25,17 +25,17 @@ public class AbonentDao extends AbstractDao<Abonent> {
     }
 
     @Override
-    public boolean delete(Abonent entity) {
+    public boolean delete(Order entity) {
         throw new UnsupportedOperationException();
     }
 
     @Override
-    public boolean create(Abonent entity) {
+    public boolean create(Order entity) {
         throw new UnsupportedOperationException();
     }
 
     @Override
-    public Abonent update(Abonent entity) {
+    public Order update(Order entity) {
         throw new UnsupportedOperationException();
     }
 }
