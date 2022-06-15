@@ -1,5 +1,6 @@
 package com.zhuravel;
 
+import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -9,19 +10,23 @@ import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(HelloServlet.URL_HELLO)
-public class HelloServlet extends HttpServlet {
+/**
+ * Evgenii Zhuravel created on 15.05.2022
+ */
 
-    public static final String URL_HELLO = "/hello";
-
-    private static final String ATTR_VISIT_COUNTER = "visitCounter";
-    private static final String PAR_USER_NAME = "username";
-
-    private static final String NEW_LINE = "<br>";
+@WebServlet("/")
+public class TestServlet extends HttpServlet { ;
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        HttpSession session = req.getSession();
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println("doGet");
+        PrintWriter writer = resp.getWriter();
+
+        resp.setContentType("text/html");
+        writer.write("sdgwegwegewg");
+        writer.close();
+
+        /*HttpSession session = req.getSession();
 
         Integer visitCounter = (Integer) session.getAttribute(ATTR_VISIT_COUNTER);
         if (visitCounter == null) {
@@ -42,6 +47,6 @@ public class HelloServlet extends HttpServlet {
             printWriter.write("Hello " + userName + "!" + NEW_LINE);
         }
         printWriter.write("Page was visited " + visitCounter + " times.");
-        printWriter.close();
+        printWriter.close();*/
     }
 }
